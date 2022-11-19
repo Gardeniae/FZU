@@ -14,7 +14,7 @@ public class TestOne {
 	}
 }
 
-//第二种
+//第二
 import java.util.Scanner;
 import java.util.*;
 public class TestOne 
