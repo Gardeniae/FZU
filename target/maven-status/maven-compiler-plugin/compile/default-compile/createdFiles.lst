@@ -1,0 +1,6 @@
+com\example\config\CorsConfig.class
+com\example\service\ChangeToChinese.class
+com\example\service\transform.class
+com\example\service\judgeType.class
+com\example\Demo1Application.class
+com\example\Controller\Controller.class
