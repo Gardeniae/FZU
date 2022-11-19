@@ -9,7 +9,7 @@
 
 #### 技术栈
 
-vue/Spring Boot
+Android/Spring Boot
 
 #### 说明
 
