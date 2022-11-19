@@ -1,0 +1,6 @@
+POST http://localhost:8090/App/get
+Content-Type: application/x-www-form-urlencoded
+
+string=柒万叁仟陆佰肆拾陆元整
+
+###
