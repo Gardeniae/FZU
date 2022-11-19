@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller {
-
+int i;
 
 
     String result;
@@ -28,13 +28,10 @@ public class Controller {
             ChangeToChinese t2=new ChangeToChinese();
             result=t2.int2chineseNum(string);
         }
+        else{
+            result="输入错误!";
+        }
         return result;
-//        ChangeToChinese t2=new ChangeToChinese();
-//        result=t2.int2chineseNum(string);
-//        return result;
-//        transform t1  = new transform();
-//        result=t1.op(string);
-//        return  result;
     }
 
 }
