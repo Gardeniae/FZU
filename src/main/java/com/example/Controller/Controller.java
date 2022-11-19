@@ -1,25 +1,40 @@
 package com.example.Controller;
 
 
-import com.example.server.Server;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.example.service.ChangeToChinese;
+import com.example.service.judgeType;
+import com.example.service.transform;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+
 
 @RestController
 public class Controller {
+int i;
 
 
-    @Resource
-    private Server server;
+    String result;
+    @PostMapping("/App/get")
+    public String Get(String string){
 
-    @GetMapping("/App/get")
-    public String get(String string){
-
-
-        string=server.change(string);
-        return string;
+        judgeType type=new judgeType();
+        int flag=type.judgeX(string);
+        if(flag == 1){
+            transform t1  = new transform();
+            result=t1.op(string);
+        }
+        else if(flag == 0){
+            ChangeToChinese t2=new ChangeToChinese();
+            result=t2.int2chineseNum(string);
+        }
+        return result;
+//        ChangeToChinese t2=new ChangeToChinese();
+//        result=t2.int2chineseNum(string);
+//        return result;
+//        transform t1  = new transform();
+//        result=t1.op(string);
+//        return  result;
     }
 
 }
