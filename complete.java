@@ -8,7 +8,7 @@ public class ConvertUpMoney {
             return str;
         }
         if ("0".equals(str) || "0.00".equals(str) || "0.0".equals(str)) {
-            return "零元";
+            return "零";
         }
         boolean flag = false;
         if (str.startsWith("-")) {
